@@ -13,9 +13,10 @@
         const child = () => {
           console.log(x + y);
         };
-        child();
+        return child;
       };
-      parent(5);
+      const parentResult = parent(5);
+      parentResult();
     </script>
   </body>
 </html>
