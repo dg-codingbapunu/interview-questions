@@ -5,9 +5,17 @@
   </head>
   <body>
     <script>
-      // null and undefined
-      let a = null;
-      console.log(typeof a);
+      // closure in js
+      // closure means that inner fuction always access variable and parameter of its outer function
+      const parent = (y) => {
+        let x = 10;
+
+        const child = () => {
+          console.log(x + y);
+        };
+        child();
+      };
+      parent(5);
     </script>
   </body>
 </html>
