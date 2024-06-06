@@ -5,18 +5,13 @@
   </head>
   <body>
     <script>
-      // closure in js
-      // closure means that inner fuction always access variable and parameter of its outer function
-      const parent = (y) => {
-        let x = 10;
-
-        const child = () => {
-          console.log(x + y);
-        };
-        return child;
-      };
-      const parentResult = parent(5);
-      parentResult();
+      // Hoisting in javascript
+      // x = 10;
+      // console.log(x);
+      sum(3, 10);
+      function sum(a, b) {
+        console.log(a * b);
+      }
     </script>
   </body>
 </html>
