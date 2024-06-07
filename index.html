@@ -2,16 +2,39 @@
 <html lang="en">
   <head>
     <title>Inter View</title>
-  </head>
-  <body>
-    <script>
-      // Hoisting in javascript
-      // x = 10;
-      // console.log(x);
-      sum(3, 10);
-      function sum(a, b) {
-        console.log(a * b);
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
       }
+
+      #parentClick {
+        height: 100px;
+        width: 100px;
+        background-color: brown;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="parentClick" onclick="Click1()">
+      <button id="childClick" onclick="Click2()">Click me</button>
+    </div>
+
+    <script>
+      // event bubling in javascript
+      const Click1 = () => {
+        alert("Parent Click");
+      };
+      const Click2 = () => {
+        alert("Child Click");
+        event.stopPropagation();
+      };
     </script>
   </body>
 </html>
