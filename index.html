@@ -6,17 +6,17 @@
   </head>
   <body>
     <script>
-      // call back function
-      const firstFun = (name, callback) => {
-        setTimeout(() => {
-          console.log(`my name is ${name}`);
-          callback();
-        }, 2000);
-      };
-      const secondFun = () => {
-        console.log("call back fuction");
-      };
-      firstFun("bapunu", secondFun);
+      // set Time out & setInterval
+
+      let setTime = setTimeout(() => {
+        console.log("hello");
+      }, 2000);
+      clearTimeout(setTime);
+
+      let inter = setInterval(() => {
+        console.log("hyy");
+      }, 1000);
+      clearInterval(inter);
     </script>
   </body>
 </html>
